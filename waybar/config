@@ -3,8 +3,8 @@
     "position": "top", 
     "height": 40, 
     "spacing": 6,
-    "modules-left": [ "hyprland/window"],
-    "modules-center": ["wlr/workspaces"],
+    "modules-left": [ "niri/window"],
+    "modules-center": ["niri/workspaces"],
     "modules-right": ["tray", "network", "pulseaudio", "memory", "cpu", "clock"],
     "wlr/workspaces": {
         "format": "{icon}",
@@ -13,7 +13,7 @@
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
-    "hyprland/window": {
+    "niri/window": {
         "format": "\uf061 {}",
         "separate-outputs": true
     },
