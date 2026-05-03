@@ -269,7 +269,7 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-spawn-sh-at-startup "swaybg -i /usr/share/hypr/wall2.png -m fill"
+spawn-sh-at-startup "swaybg -i /usr/share/backgrounds/archlinux/landscape.jpg -m fill"
 spawn-at-startup "mako"
 
 spawn-sh-at-startup "udiskie &amp"
@@ -379,7 +379,9 @@ binds {
     Mod+A hotkey-overlay-title="Run an Application" { spawn "wofi" "--show" "drun"; }
     Super+Shift+L hotkey-overlay-title="Lock the Screen" { spawn "hyprlock"; }
     Super+Shift+M hotkey-overlay-title="lock and suspend" {spawn "/usr/bin/sh" "/home/tangjiaxin/lockandsleep.sh";}
-
+	
+    Mod+Shift+C hotkey-overlay-title="Show ClipBoard" { spawn-sh "~/showclipboard.sh"; }
+    Mod+Shift+Delete hotkey-overlay-title="Delete all paste board" { spawn-sh "~/delclipboard.sh"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
