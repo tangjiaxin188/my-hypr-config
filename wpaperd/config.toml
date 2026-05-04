@@ -1,0 +1,4 @@
+[default]
+	path = "/usr/share/backgrounds/archlinux"
+	duration = "10m"
+	sorting = "random"

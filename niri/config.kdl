@@ -269,9 +269,9 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-spawn-sh-at-startup "swaybg -i /usr/share/backgrounds/archlinux/landscape.jpg -m fill"
+//spawn-sh-at-startup "swaybg -i /usr/share/backgrounds/archlinux/landscape.jpg -m fill"
 spawn-at-startup "mako"
-
+spawn-at-startup "wpaperd"
 spawn-sh-at-startup "udiskie &amp"
 spawn-at-startup "nm-applet"
 
