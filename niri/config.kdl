@@ -378,7 +378,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "xfce4-terminal"; }
     Mod+A hotkey-overlay-title="Run an Application" { spawn "wofi" "--show" "drun"; }
     Super+Shift+L hotkey-overlay-title="Lock the Screen" { spawn "hyprlock"; }
-    Super+Shift+M hotkey-overlay-title="lock and suspend" {spawn "/usr/bin/sh" "/home/tangjiaxin/lockandsleep.sh";}
+    Super+Shift+M hotkey-overlay-title="lock and suspend" {spawn "nwg-bar";}
 	
     Mod+Shift+C hotkey-overlay-title="Show ClipBoard" { spawn-sh "~/showclipboard.sh"; }
     Mod+Shift+Delete hotkey-overlay-title="Delete all paste board" { spawn-sh "~/delclipboard.sh"; }
