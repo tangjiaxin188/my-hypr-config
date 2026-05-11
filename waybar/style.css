@@ -63,10 +63,15 @@ window#waybar.hidden {
 #pulseaudio,
 #tray,
 #mode,
-#window {
+#window,
+#custom-arch {
     margin-top: 6px;
     padding: 0 12px;
     color: #ffffff;
+}
+
+#custom-arch {
+    background-color: #b39ddb;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

@@ -3,8 +3,8 @@
     "position": "top", 
     "height": 40, 
     "spacing": 6,
-    "modules-left": [ "niri/window"],
-    "modules-center": ["niri/workspaces"],
+    "modules-left": ["niri/window"],
+    "modules-center": ["custom/arch","niri/workspaces"],
     "modules-right": ["tray", "network", "pulseaudio","pulseaudio#microphone", "memory", "cpu", "clock"],
     "wlr/workspaces": {
         "format": "{icon}",
@@ -12,6 +12,10 @@
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "custom/arch": {
+	"format": "\uf303",
+	"on-click": "wofi --show drun"
     },
     "niri/window": {
         "format": "\uf061 {}",
