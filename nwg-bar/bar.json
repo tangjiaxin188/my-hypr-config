@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Lock",
+    "exec": "hyprlock",
+    "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
+  },
+  {
+    "label": "Reboot",
+    "exec": "reboot",
+    "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
+  },
+  {
+    "label": "Shutdown",
+    "exec": "shutdown now",
+    "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
+  },
+  {
+    "label": "Suspend",
+    "exec": "sh ~/lockandsleep.sh",
+    "icon": "/usr/share/nwg-bar/images/system-suspend.svg"
+  }
+]
