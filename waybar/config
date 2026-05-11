@@ -5,7 +5,7 @@
     "spacing": 6,
     "modules-left": [ "niri/window"],
     "modules-center": ["niri/workspaces"],
-    "modules-right": ["tray", "network", "pulseaudio", "memory", "cpu", "clock"],
+    "modules-right": ["tray", "network", "pulseaudio","pulseaudio#microphone", "memory", "cpu", "clock"],
     "wlr/workspaces": {
         "format": "{icon}",
         "sort-by-number": true,
@@ -48,9 +48,9 @@
     "pulseaudio": {
         "scroll-step": 5,
         "format": "{icon} {volume}%",
-        "format-muted": "",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": " {icon}",
+        "format-muted": "\uf466",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "\uf466 {icon}",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -60,6 +60,16 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click-right": "pavucontrol"
+        "on-click-right": "pavucontrol",
+	"on-click" : "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "pulseaudio#microphone":{
+    	"format":"{format_source}",
+	"format-source":"\uf130 {volume}%",
+	"format-source-muted": "\uf131",
+    	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+	"on-click-right": "pavucontrol",
+    	"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+    	"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"
     }
 }
