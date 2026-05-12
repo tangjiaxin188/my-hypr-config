@@ -20,10 +20,10 @@ window#waybar.hidden {
 }
 
 #workspaces {
-	margin-top: 6px;
-	background: rgba(16, 20, 24, 0.5);
-	transition: none;
-
+    margin-top: 6px;
+    background: rgba(16, 20, 24, 0.5);
+    transition: none;
+    margin-right: 10px;
     font-size: 12px;
 }
 
@@ -64,6 +64,9 @@ window#waybar.hidden {
 #tray,
 #mode,
 #window,
+#battery,
+#custom-poweroff,
+#custom-clipboard,
 #custom-arch {
     margin-top: 6px;
     padding: 0 12px;
@@ -72,6 +75,22 @@ window#waybar.hidden {
 
 #custom-arch {
     background-color: #b39ddb;
+    margin-left: 10px;
+    /* color: #000000; */
+}
+
+#custom-poweroff {
+    background-color: #FF0000;
+}
+
+#custom-clipboard {
+    background-color: #7BD35F;
+    /* color: #000000; */
+}
+
+#battery {
+    background-color: #FEDA09;
+    color: #000000;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

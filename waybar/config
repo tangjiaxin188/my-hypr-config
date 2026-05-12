@@ -5,13 +5,29 @@
     "spacing": 6,
     "modules-left": ["niri/window"],
     "modules-center": ["custom/arch","niri/workspaces"],
-    "modules-right": ["tray", "network", "pulseaudio","pulseaudio#microphone", "memory", "cpu", "clock"],
+    "modules-right": ["tray", "custom/clipboard","network", "pulseaudio","pulseaudio#microphone", "memory", "cpu","battery", "clock","custom/poweroff"],
     "wlr/workspaces": {
         "format": "{icon}",
         "sort-by-number": true,
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "custom/clipboard": {
+	"format":"\uf07f",
+	"on-click": "/usr/bin/sh /home/tangjiaxin/showclipboard.sh",
+	"on-click-right": "/usr/bin/sh /home/tangjiaxin/delclipboard.sh",
+	"tooltip-format": "点击打开，右键删除"
+    },
+    "custom/poweroff": {
+	"format":"\uf011",
+	"on-click": "nwg-bar"
+    },
+    "battery": {
+	"format": "{capacity}% \uf240",
+	"format-charging": "⚡ {capacity}% \uf240",
+	"format-warning": "⚠️ {capacity}% \uf243",
+    	"format-critical": "🔴 {capacity}% \uf244"
     },
     "custom/arch": {
 	"format": "\uf303",
@@ -54,7 +70,7 @@
         "format": "{icon} {volume}%",
         "format-muted": "\uf466",
         "format-bluetooth": " {volume}%",
-        "format-bluetooth-muted": "\uf466 {icon}",
+        "format-bluetooth-muted": "\uf466 ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
