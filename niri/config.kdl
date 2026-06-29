@@ -276,8 +276,8 @@ spawn-sh-at-startup "udiskie &amp"
 spawn-at-startup "nm-applet"
 
 spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
-spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
-spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store -max-items 30"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store -max-items 30"
 spawn-sh-at-startup "fcitx5 --replace -d"
 spawn-sh-at-startup "blueman"
 
@@ -340,6 +340,19 @@ window-rule {
     open-floating true
 }
 
+// 1. 全局窗口圆角设置
+window-rule {
+    geometry-corner-radius 10        // 圆角半径，可按喜好调整
+    clip-to-geometry true
+}
+
+// 2. Foot 专用规则：浮动模式
+window-rule {
+    match app-id="foot"
+    //draw-border-with-background false
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -375,7 +388,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal" { spawn "xfce4-terminal"; }
+    Mod+T hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
     Mod+A hotkey-overlay-title="Run an Application" { spawn "wofi" "--show" "drun"; }
     Super+Shift+L hotkey-overlay-title="Lock the Screen" { spawn "hyprlock"; }
     Super+Shift+M hotkey-overlay-title="lock and suspend" {spawn "nwg-bar";}
