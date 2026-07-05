@@ -43,8 +43,8 @@
     },
     "clock": {
         "interval": 1,
-        "format": "\uf017 {:%H:%M:%S}",
-        "format-alt": "\uf133 {:%Y-%m-%d %H:%M:%S}"
+        "format": "\uf017 {:%H:%M}",
+        "format-alt": "\uf133 {:%Y-%m-%d %H:%M %A}"
     },
     "cpu": {
         "interval": 1,
